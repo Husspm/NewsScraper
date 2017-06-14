@@ -16,8 +16,11 @@ app.use(logger("dev"));
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(express.static("public"));
-
-mongoose.connect("mongodb://localhost/NYTscrapper");
+if (process.env.MONGODB_URI) {
+    mongoose.connect(process.env.MONGODB_URI);
+} else {
+    mongoose.connect("mongodb://localhost/NYTscrapper");
+}
 var db = mongoose.connection;
 
 db.on("error", function (error) {
