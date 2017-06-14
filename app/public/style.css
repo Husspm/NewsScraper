@@ -7,8 +7,7 @@ header {
 }
 
 body {
-    background: radial-gradient(#fff, #eff, #fff);
-    background-size: 20px 20px;
+    background: linear-gradient(#fff, #eee, #ddd, #eee, #fff);
 }
 
 .linkAdjust {
@@ -39,10 +38,15 @@ p {
     border: 4px double black;
 }
 
-.article-wrap1 {
+.article-wrap1,
+.article-wrap2 {
     border: 2px solid black;
     padding: 10px;
     margin-top: 10px;
+}
+
+img {
+    width: 150px;
 }
 
 .section-wrap {
