@@ -14,7 +14,6 @@ var app = express();
 
 app.use(logger("dev"));
 app.use(bodyParser.urlencoded({extended: false}));
-
 app.use(express.static("public"));
 if (process.env.MONGODB_URI) {
     mongoose.connect(process.env.MONGODB_URI);
